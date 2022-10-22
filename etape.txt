@@ -1,0 +1,18 @@
+Etape 0 	 X : programme 	 a : main(){
+Etape 1 	 X : main(){ 	 a : main(){
+Etape 2 	 X : liste_declaration 	 a : int
+Etape 3 	 X : une_declaration 	 a : int
+Etape 4 	 X : type 	 a : int
+Etape 5 	 X : int 	 a : int
+Etape 6 	 X : id 	 a : id
+Etape 7 	 X : liste_declaration 	 a : id
+Etape 8 	 X : liste_instructions 	 a : id
+Etape 9 	 X : instruction 	 a : id
+Etape 10 	 X : affectation 	 a : id
+Etape 11 	 X : id 	 a : id
+Etape 12 	 X : = 	 a : =
+Etape 13 	 X : nombre 	 a : nombre
+Etape 14 	 X : ; 	 a : ;
+Etape 15 	 X : liste_instructions 	 a : if
+Etape 16 	 X : vide 	 a : if
+erreur de syntaxe3

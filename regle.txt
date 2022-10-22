@@ -1,0 +1,10 @@
+<programme> ::= main(){<liste_declaration><liste_instructions>}
+<liste_declaration> ::= <une_declaration><liste_declaration> | vide
+<une_declaration> ::= <type>id
+<type> ::= int | float
+<liste_declaration> ::= <une_declaration><liste_declaration> | vide
+<liste_instructions> ::= <instruction><liste_instructions> | vide
+<instruction> ::= <affectation> | <test>
+<affectation> ::= id=nombre;
+<liste_instructions> ::= <instruction><liste_instructions> | vide
+erreur de syntaxe3

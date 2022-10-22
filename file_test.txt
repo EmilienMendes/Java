@@ -1,0 +1,1 @@
+main(){ int id id = nombre ; if id < nombre id = nombre; else id = nombre ; ; }
