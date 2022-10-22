@@ -160,6 +160,8 @@ void setup() {
   tab.ajouter_tab_symb_term(une_declaration);
   tab.ajouter_symb_term(t_int, 0, une_declaration);
   tab.ajouter_symb_term(t_float, 0, une_declaration);
+
+  
   //R3 ET R3' LISTE INSTRUCTION
   tab.ajouterRegle(liste_instructions);
   tab.ajouter_tab_symb_term(liste_instructions);
@@ -213,34 +215,8 @@ void setup() {
   tab.ajouter_symb_term(t_egale, 2, operateur);
 
   //affichage du tableau d'analyse
-  tab.afficherHash();
+  //tab.afficherHash();
 
-  // Entree
-  symbole[] chaine = new symbole[23];
-  chaine[0]=t_main;
-  chaine[1]=t_int;
-  chaine[2]=t_id;
-  chaine[3]=t_id;
-  chaine[4]=t_egale;
-  chaine[5]=t_nombre;
-  chaine[6]=t_pv;
-  chaine[7]=t_if;
-  chaine[8]=t_id;
-  chaine[9]=t_inferieur;
-  chaine[10]=t_nombre;
-  chaine[11]=t_id;
-  chaine[12]=t_egale;
-  chaine[13]=t_nombre;
-  chaine[14]=t_pv;
-  chaine[15]=t_else;
-  chaine[16]=t_id;
-  chaine[17]=t_egale;
-  chaine[18]=t_nombre;
-  chaine[19]=t_pv;
-  chaine[20]=t_pv;
-  chaine[21]=t_acco_f;
-  chaine[22]=fin;
-  
   
   
   ArrayList <symbole> chaineRentrer = new ArrayList <symbole>();
@@ -293,16 +269,17 @@ void setup() {
         chaineRentrer.add(t_vide);
         //println("-1");
       } else {
+        chaineRentrer.add(fin);
         //println("Erreur de syntaxe du symbole terminale");
         exit();
       }
+      
     }
-     chaineRentrer.add(fin);
+    chaineRentrer.add(fin);
   }
-  println("");
   
   for (int k = 0; k<chaineRentrer.size(); k++) {
-    print(chaineRentrer.get(k).nom + " ");
+   // println(chaineRentrer.get(k).nom);
   }
 
 
@@ -311,5 +288,5 @@ void setup() {
   pile.push(fin);
   pile.push(programme);
 
-  algorithme(tab,chaineRentrer,pile,tableauDeRegle);
+  println(algorithme(tab,chaineRentrer,pile,tableauDeRegle));
 }  
